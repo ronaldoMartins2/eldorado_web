@@ -1,0 +1,27 @@
+<h2>Book list</h2>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
+
+<div *ngFor="let book of books">
+
+  <h3>
+    <a [title]="book.author + ' details'">
+        {{ book.title }}
+    </a>
+  </h3>
+
+  
+  <p *ngIf="book.description">
+    Description: {{ book.description }}
+  </p>
+  
+  <button (click)="remove(book.id)">
+    Remove
+  </button>
+
+</div>
